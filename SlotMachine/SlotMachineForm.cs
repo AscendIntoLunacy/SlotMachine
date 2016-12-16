@@ -9,6 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Application Name: Slot Machine Form
+ * Author Name: Bradley Girard
+ * Student ID: 200247921
+ * Application Creation Date: December 8th, 2016
+ * Application Description: This application is a slot machine made from a windows form. Allows the users to bet and win a jackpot.
+ */
+
 namespace SlotMachine
 {
     public partial class SlotMachineForm : Form
@@ -72,7 +80,7 @@ namespace SlotMachine
         /* Utility function to reset the player stats */
         private void resetAll()
         {
-            playerMoney = 1000;
+            playerMoney = 5000;
             winnings = 0;
             jackpot = 5000;
             turn = 0;
@@ -281,6 +289,58 @@ namespace SlotMachine
             {
                 MessageBox.Show("Please enter a valid bet amount");
             }
+        }
+
+        private void ResetPictureBox_Click(object sender, EventArgs e)
+        {
+            resetAll();
+        }
+
+        private void PowerPictureBox_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BetButton10_Click(object sender, EventArgs e)
+        {
+            BetLabel.Text = "10";
+            playerBet = 10;
+        }
+
+        private void BetButton20_Click(object sender, EventArgs e)
+        {
+            BetLabel.Text = "20";
+            playerBet = 20;
+        }
+
+        private void BetButton30_Click(object sender, EventArgs e)
+        {
+            BetLabel.Text = "30";
+            playerBet = 30;
+        }
+
+        private void BetButton40_Click(object sender, EventArgs e)
+        {
+            BetLabel.Text = "40";
+            playerBet = 40;
+        }
+
+        private void BetButton50_Click(object sender, EventArgs e)
+        {
+            BetLabel.Text = "50";
+            playerBet = 50;
+        }
+
+        private void BetButton100_Click(object sender, EventArgs e)
+        {
+            BetLabel.Text = "100";
+            playerBet = 100;
+        }
+
+        private void BetButton1000_Click(object sender, EventArgs e)
+        {
+            BetLabel.Text = "1000";
+            playerBet = 1000;
         }
     }
 
